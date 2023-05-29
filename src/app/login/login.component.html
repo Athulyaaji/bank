@@ -1,0 +1,24 @@
+<div >
+   <!-- <h3>{{data}}</h3> -->
+    <div class="col-6 mt-3">
+        <img id="d" style="height: 100px; margin-left: 590px; "  src="https://i.postimg.cc/rFmjr19c/bank.jpg" alt="">    </div>
+        <h2 class="text-center mt-2 ">Sign In</h2>
+    <form id="d" action="" class="bg-light border container mt-3 p-5 w-25 ">
+        <div class="p-2 mt-2 " >
+            <label for="ul">Account No</label>
+            <input (change)="acnochange($event)" type="text" class="form-control" id="u1 " name="acno" [placeholder]="pdata">
+        </div>
+        <div class="p-2 mt-2">
+            <label #psw for="pl">Password</label>
+            <input type="password" class="form-control" id="p1" name="password" placeholder="password">
+        </div>
+        <div class="p-2 mt-2 text-center" >
+            <button (click)="login(psw)" class="btn btn-success" type="submit">Login</button>
+        </div>
+<div>
+    <a class="text-center mt-2" href="http://localhost:4200/register">Create  a new account</a>
+
+</div>
+        
+    </form>
+</div>

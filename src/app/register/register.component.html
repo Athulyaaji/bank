@@ -1,0 +1,30 @@
+<div  >
+   
+    <div class="col-6 mt-3">
+        <img id="d" style="height: 100px; margin-left: 590px; "  src="https://i.postimg.cc/rFmjr19c/bank.jpg" alt="">    </div>
+        <h2 class="text-center mt-2 ">Sign Up</h2>
+    <form action="" class="bg-light border container mt-3 p-5 w-25 " id="d">
+        <div class="p-2 mt-2 " >
+            <label for="ul">Account No</label>
+            <input [(ngModel)]="acno" type="text" class="form-control" id="u1" name="acno" placeholder="account no">
+        </div>
+        <div class="p-2 mt-2">
+            <label for="u2">Username</label>
+            <input [(ngModel)]="uname" type="password" class="form-control" id="u2" name="uname" placeholder="username">
+        </div>
+
+        <div class="p-2 mt-2">
+            <label for="pl">Password</label>
+            <input [(ngModel)]="psw" type="password" class="form-control" id="p1" name="password" placeholder="password">
+        </div>
+        <div class="p-2 mt-2">
+            <label for="p2"> Confirm Password</label>
+            <input [(ngModel)]="cpsw" type="password" class="form-control" id="p2" name="cpassword" placeholder="confirmpassword">
+        </div>
+
+        <div class="p-2 mt-2 text-center" id="d" >
+            <button (click)="signup()" class="btn btn-success" type="button">Register</button>
+        </div>
+        
+    </form>
+</div>
