@@ -9,32 +9,43 @@ import { DataService } from '../data.service';
 })
 export class LoginComponent implements OnInit {
 
-  // data="happy banking with us"
-  pdata="enter acno"
+  pdata = "enter acno"
 
-  serviceData:any
+  serviceData: any
+
+  acno: any
+  psw: any
+
+  constructor(private rout: Router, private ds: DataService) { }
 
 
-  constructor(private rout:Router,private ds:DataService ){}
+  ngOnInit(): void {
+console.log(this.serviceData);
 
 
-  ngOnInit():void{
-    this.serviceData=this.ds.sdata
-    console.log(this.serviceData);
-    this.ds.smethod()
-    
   }
 
-  login(a:any){
-    console.log(a.value);
-    
+  login() {
 
-    alert('login clicked')
-    this.rout.navigateByUrl('home')
+     var acno=this.acno
+   var psw=this.psw
+    this.ds.login(acno,psw).subscribe((result:any)=>{
+       alert(result.message)
+       this.rout.navigateByUrl("home")
+
+    },
+    result=>{
+      alert(result.error.message)
+    }
+    )
+
+    //  console.log(this.acno);
+    // console.log(this.psw);
+
+
+
+
   }
 
-  acnochange(event:any){
-    console.log(event.traget.value);
-  }
 
 }
